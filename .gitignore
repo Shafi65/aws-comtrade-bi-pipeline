@@ -1,0 +1,37 @@
+# ---- Secrets: NEVER commit these ----
+.env
+.env.*
+!.env.example
+*.key
+*secret*
+credentials
+aws-credentials*
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- Data (raw pulls, parquet, query results stay local/S3, not in git) ----
+data/
+*.parquet
+*.csv
+!docs/**/*.csv
+raw/
+processed/
+athena-results/
+
+# ---- Lambda build artifacts ----
+*.zip
+build/
+package/
+
+# ---- OS / editor / local tooling ----
+.DS_Store
+.vscode/
+.idea/
+.claude/
